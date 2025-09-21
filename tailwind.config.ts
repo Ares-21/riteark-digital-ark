@@ -76,6 +76,7 @@ export default {
         'float': 'float 3s ease-in-out infinite',
       },
       fontFamily: {
+        'roboto': ['Roboto', 'sans-serif'],
         'playfair': ['Playfair Display', 'serif'],
         'inter': ['Inter', 'sans-serif'],
       },

@@ -37,7 +37,7 @@ const Hero = () => {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold tracking-tight">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-roboto font-bold tracking-tight">
               <span className="gradient-text">RITE ARK</span>
               <br />
               <span className="gradient-text">TECHNOLOGIES LLC</span>
