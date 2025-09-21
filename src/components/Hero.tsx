@@ -31,9 +31,9 @@ const Hero = () => {
           {/* Hero Content */}
           <div className="space-y-8 animate-slide-up">
             {/* Badge */}
-            <div className="inline-flex items-center gap-3 bg-card/30 backdrop-blur-sm border border-primary/20 rounded-full px-8 py-4 text-base font-medium">
-              <Shield className="w-5 h-5 text-primary" fill="currentColor" />
-              <span className="text-primary font-semibold">Your Digital ARK of Trust</span>
+            <div className="inline-flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border/50 rounded-full px-6 py-3 text-sm font-medium">
+              <Shield className="w-4 h-4 text-primary" />
+              <span className="text-muted-foreground">Your Digital ARK of Trust</span>
             </div>
 
             {/* Main Heading */}
