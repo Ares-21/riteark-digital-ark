@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border/50 rounded-full px-8 py-4 mb-6">
               <FileText className="w-5 h-5 text-primary" />
-              <span className="text-2xl font-bold gradient-text">
+              <span className="text-4xl md:text-5xl font-bold gradient-text">
                 Privacy Policy
               </span>
             </div>
