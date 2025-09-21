@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
           {/* Logo Section */}
-          <div className="mb-6 animate-fade-in">
+          <div className="mb-4 animate-fade-in">
             <img 
               src={riteArkLogo} 
               alt="Rite Ark Technologies - Your Digital ARK of Trust" 
