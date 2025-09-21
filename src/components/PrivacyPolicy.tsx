@@ -246,12 +246,27 @@ const PrivacyPolicy = () => {
               </div>
             </div>
 
+            {/* Updates */}
+            <div className="service-card p-6">
+              <div className="flex items-start gap-4">
+                <Clock className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <h2 className="text-xl font-semibold text-foreground mb-3">14. Policy Updates</h2>
+                  <p className="text-muted-foreground">
+                    We may update this Privacy Policy periodically to reflect changes in our practices, technology, or legal requirements. 
+                    We will notify you of any material changes via email or through our website. The "Effective Date" at the top of this 
+                    policy indicates when it was last revised.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* Contact Information */}
             <div className="service-card p-6 bg-primary/5 border-primary/20">
               <div className="flex items-start gap-4">
                 <FileText className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <h2 className="text-xl font-semibold text-foreground mb-3">14. Contact Us</h2>
+                  <h2 className="text-xl font-semibold text-foreground mb-3">15. Contact Us</h2>
                   <p className="text-muted-foreground mb-3">
                     If you have questions about this Privacy Policy or wish to exercise your rights, please contact us:
                   </p>
@@ -260,21 +275,6 @@ const PrivacyPolicy = () => {
                     <p><strong>Phone:</strong> +971 50 3711579</p>
                     <p><strong>Address:</strong> Rite Ark Technologies LLC, UAE</p>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Updates */}
-            <div className="service-card p-6">
-              <div className="flex items-start gap-4">
-                <Clock className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                <div>
-                  <h2 className="text-xl font-semibold text-foreground mb-3">15. Policy Updates</h2>
-                  <p className="text-muted-foreground">
-                    We may update this Privacy Policy periodically to reflect changes in our practices, technology, or legal requirements. 
-                    We will notify you of any material changes via email or through our website. The "Effective Date" at the top of this 
-                    policy indicates when it was last revised.
-                  </p>
                 </div>
               </div>
             </div>
