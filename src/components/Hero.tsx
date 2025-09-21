@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Shield, Sparkles } from 'lucide-react';
+import { ArrowRight, Shield, Sparkles, ShieldCheck } from 'lucide-react';
 import riteArkLogo from '@/assets/rite-ark-logo.jpg';
 
 const Hero = () => {
@@ -40,7 +40,7 @@ const Hero = () => {
             
             {/* Tagline */}
             <div className="flex items-center justify-center gap-3 text-2xl md:text-3xl text-yellow-300 font-medium mt-4">
-              <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+              <ShieldCheck className="w-5 h-5 text-yellow-400" />
               <span>Your Digital ARK of Trust</span>
             </div>
 
