@@ -30,7 +30,7 @@ const About = () => {
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Building <span className="gradient-text">Digital Fortresses</span>
               <br />for Modern Business
             </h2>
