@@ -91,109 +91,111 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Contact Form */}
-            <div className="animate-slide-up">
-              <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 glow-elegant">
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold mb-3 text-foreground">
-                    Get Your Free Consultation
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Tell us about your challenges, and we'll craft a solution that fits your needs perfectly.
-                  </p>
+          {/* Two main boxes with equal height */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-16">
+            {/* Contact Form Box */}
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 glow-elegant h-full animate-slide-up">
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold mb-3 text-foreground">
+                  Get Your Free Consultation
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Tell us about your challenges, and we'll craft a solution that fits your needs perfectly.
+                </p>
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <Label htmlFor="name" className="text-foreground font-medium text-sm">
+                    Your Name *
+                  </Label>
+                  <Input
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="mt-1 bg-background/50 border-border/50 focus:border-primary/50 focus:bg-background/80 transition-all"
+                    placeholder="Enter your full name"
+                  />
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <Label htmlFor="name" className="text-foreground font-medium">
-                      Your Name *
-                    </Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="mt-2 bg-background/50 border-border/50 focus:border-primary/50 focus:bg-background/80 transition-all"
-                      placeholder="Enter your full name"
-                    />
-                  </div>
+                <div>
+                  <Label htmlFor="email" className="text-foreground font-medium text-sm">
+                    Email Address *
+                  </Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="mt-1 bg-background/50 border-border/50 focus:border-primary/50 focus:bg-background/80 transition-all"
+                    placeholder="your.email@company.com"
+                  />
+                </div>
 
-                  <div>
-                    <Label htmlFor="email" className="text-foreground font-medium">
-                      Email Address *
-                    </Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="mt-2 bg-background/50 border-border/50 focus:border-primary/50 focus:bg-background/80 transition-all"
-                      placeholder="your.email@company.com"
-                    />
-                  </div>
+                <div>
+                  <Label htmlFor="message" className="text-foreground font-medium text-sm">
+                    Project Details *
+                  </Label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={4}
+                    className="mt-1 bg-background/50 border-border/50 focus:border-primary/50 focus:bg-background/80 transition-all resize-none"
+                    placeholder="Describe your current challenges, goals, and what you're looking to achieve..."
+                  />
+                </div>
 
-                  <div>
-                    <Label htmlFor="message" className="text-foreground font-medium">
-                      Project Details *
-                    </Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={5}
-                      className="mt-2 bg-background/50 border-border/50 focus:border-primary/50 focus:bg-background/80 transition-all resize-none"
-                      placeholder="Describe your current challenges, goals, and what you're looking to achieve..."
-                    />
-                  </div>
-
-                  <Button 
-                    type="submit" 
-                    variant="hero" 
-                    size="lg" 
-                    disabled={isSubmitting}
-                    className="w-full group"
-                  >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
-                    <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </form>
-              </div>
+                <Button 
+                  type="submit" 
+                  variant="hero" 
+                  size="lg" 
+                  disabled={isSubmitting}
+                  className="w-full group mt-6"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </form>
             </div>
 
-            {/* Contact Information */}
-            <div className="space-y-8 animate-fade-in">
-              {/* Contact Details */}
-              <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 glow-elegant">
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold mb-3 text-foreground">
-                    Direct Contact Information
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Get in touch with our team for immediate assistance and expert guidance.
-                  </p>
-                </div>
-                
-                <div className="space-y-6">
-                  {contactInfo.map((info) => (
-                    <div key={info.label} className="flex items-start gap-4 p-4 rounded-xl bg-background/20 border border-border/30 hover:bg-background/30 transition-all">
-                      <div className="w-12 h-12 bg-gradient-hero rounded-xl flex items-center justify-center shadow-gold">
-                        <info.icon className="w-6 h-6 text-primary-foreground" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-foreground mb-1">{info.label}</h4>
-                        <p className="text-lg font-medium gradient-text mb-1">{info.value}</p>
-                        <p className="text-sm text-muted-foreground">{info.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+            {/* Contact Information Box */}
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 glow-elegant h-full animate-fade-in">
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold mb-3 text-foreground">
+                  Direct Contact Information
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Get in touch with our team for immediate assistance and expert guidance.
+                </p>
               </div>
+              
+              <div className="space-y-6">
+                {contactInfo.map((info) => (
+                  <div key={info.label} className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-hero rounded-xl flex items-center justify-center shadow-gold flex-shrink-0">
+                      <info.icon className="w-6 h-6 text-primary-foreground" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-foreground mb-1">{info.label}</h4>
+                      <p className="text-lg font-medium gradient-text mb-1">{info.value}</p>
+                      <p className="text-sm text-muted-foreground">{info.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Our Commitment Section */}
+          <div className="max-w-4xl mx-auto">
+            <div>
 
               {/* Guarantees */}
               <div>
