@@ -169,15 +169,20 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="space-y-8 animate-fade-in">
               {/* Contact Details */}
-              <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-foreground mb-6">
-                  Direct Contact Information
-                </h3>
+              <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 glow-elegant">
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold mb-3 text-foreground">
+                    Direct Contact Information
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Get in touch with our team for immediate assistance and expert guidance.
+                  </p>
+                </div>
                 
-                {contactInfo.map((info) => (
-                  <div key={info.label} className="service-card group">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-gradient-hero rounded-xl flex items-center justify-center shadow-gold group-hover:shadow-glow transition-all duration-300">
+                <div className="space-y-6">
+                  {contactInfo.map((info) => (
+                    <div key={info.label} className="flex items-start gap-4 p-4 rounded-xl bg-background/20 border border-border/30 hover:bg-background/30 transition-all">
+                      <div className="w-12 h-12 bg-gradient-hero rounded-xl flex items-center justify-center shadow-gold">
                         <info.icon className="w-6 h-6 text-primary-foreground" />
                       </div>
                       <div className="flex-1">
@@ -186,8 +191,8 @@ const Contact = () => {
                         <p className="text-sm text-muted-foreground">{info.description}</p>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
 
               {/* Guarantees */}

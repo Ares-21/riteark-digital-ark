@@ -33,7 +33,7 @@ const Hero = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border/50 rounded-full px-6 py-3 text-sm font-medium">
               <Shield className="w-4 h-4 text-primary" />
-              <span className="text-muted-foreground">Trusted Technology Solutions</span>
+              <span className="text-muted-foreground">Your Digital ARK of Trust</span>
             </div>
 
             {/* Main Heading */}
