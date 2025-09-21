@@ -25,7 +25,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-16 bg-gradient-subtle">
+    <section id="about" className="py-16 bg-gradient-subtle pt-24">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
