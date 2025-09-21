@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Shield, Sparkles } from 'lucide-react';
+import { ArrowRight, Circle, Sparkles } from 'lucide-react';
 import riteArkLogo from '@/assets/rite-ark-logo.jpg';
 
 const Hero = () => {
@@ -32,7 +32,7 @@ const Hero = () => {
           <div className="space-y-8 animate-slide-up">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border/50 rounded-full px-6 py-3 text-sm font-medium">
-              <Shield className="w-4 h-4 text-primary" />
+              <Circle className="w-4 h-4 text-primary fill-primary" />
               <span className="text-muted-foreground">Your Digital ARK of Trust</span>
             </div>
 
