@@ -246,12 +246,51 @@ const PrivacyPolicy = () => {
               </div>
             </div>
 
+            {/* Automated Processing */}
+            <div className="service-card p-6">
+              <div className="flex items-start gap-4">
+                <Shield className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <h2 className="text-xl font-semibold text-foreground mb-3">14. Automated Processing / Profiling</h2>
+                  <p className="text-muted-foreground">
+                    We may use automated tools, including AI-driven analytics, to detect threats or patterns. Such processing will not result in decisions with legal or significant impact without human review.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Employee Data */}
+            <div className="service-card p-6">
+              <div className="flex items-start gap-4">
+                <Users className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <h2 className="text-xl font-semibold text-foreground mb-3">15. Employee Data (Internal Compliance)</h2>
+                  <p className="text-muted-foreground">
+                    This policy also applies to our employees' personal data, which we process strictly for HR, payroll, and regulatory compliance purposes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Breach Notification */}
+            <div className="service-card p-6">
+              <div className="flex items-start gap-4">
+                <Shield className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <h2 className="text-xl font-semibold text-foreground mb-3">16. Breach Notification</h2>
+                  <p className="text-muted-foreground">
+                    In the event of a data breach, we will notify affected individuals and relevant authorities in accordance with UAE PDPL timelines and procedures.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* Updates */}
             <div className="service-card p-6">
               <div className="flex items-start gap-4">
                 <Clock className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <h2 className="text-xl font-semibold text-foreground mb-3">14. Policy Updates</h2>
+                  <h2 className="text-xl font-semibold text-foreground mb-3">17. Policy Updates</h2>
                   <p className="text-muted-foreground">
                     We may update this Privacy Policy periodically to reflect changes in our practices, technology, or legal requirements. 
                     We will notify you of any material changes via email or through our website. The "Effective Date" at the top of this 
@@ -266,7 +305,7 @@ const PrivacyPolicy = () => {
               <div className="flex items-start gap-4">
                 <FileText className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <h2 className="text-xl font-semibold text-foreground mb-3">15. Contact Us</h2>
+                  <h2 className="text-xl font-semibold text-foreground mb-3">18. Contact Us</h2>
                   <p className="text-muted-foreground mb-3">
                     If you have questions about this Privacy Policy or wish to exercise your rights, please contact us:
                   </p>
