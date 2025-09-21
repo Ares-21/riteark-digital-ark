@@ -105,7 +105,7 @@ const About = () => {
             <div className="inline-flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border/50 rounded-full px-8 py-4">
               <Shield className="w-5 h-5 text-primary" />
               <span className="text-lg font-semibold gradient-text">
-                Your Digital ARK of Trust - Protecting What Matters Most
+                Your Digital ARK of Trust
               </span>
             </div>
           </div>
