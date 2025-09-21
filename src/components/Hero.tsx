@@ -45,7 +45,7 @@ const Hero = () => {
             </div>
 
             {/* Main Mission Statement */}
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               <span className="gradient-text">Building Digital Fortresses</span>
               <br />for Modern Business
             </h2>
