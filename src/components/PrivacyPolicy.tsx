@@ -17,7 +17,7 @@ const PrivacyPolicy = () => {
               Rite Ark Technologies LLC
             </h1>
             <p className="text-muted-foreground text-lg">
-              Effective Date: 22.09.2025
+              Version 1.1 – Effective September 22, 2025
             </p>
           </div>
 
