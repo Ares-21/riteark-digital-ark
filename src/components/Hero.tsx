@@ -39,9 +39,10 @@ const Hero = () => {
             </h1>
             
             {/* Tagline */}
-            <p className="text-2xl md:text-3xl text-yellow-300 font-medium mt-4">
-              Your Digital ARK of Trust
-            </p>
+            <div className="flex items-center justify-center gap-3 text-2xl md:text-3xl text-yellow-300 font-medium mt-4">
+              <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+              <span>Your Digital ARK of Trust</span>
+            </div>
 
             {/* Description */}
             <p className="max-w-3xl mx-auto text-xl md:text-2xl text-muted-foreground leading-relaxed">
