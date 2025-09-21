@@ -42,6 +42,9 @@ const Header = () => {
             <button onClick={() => scrollToSection('services')} className="nav-link">
               Services
             </button>
+            <button onClick={() => scrollToSection('privacy-policy')} className="nav-link">
+              Privacy Policy
+            </button>
             <button onClick={() => scrollToSection('contact')} className="nav-link">
               Contact
             </button>
@@ -87,6 +90,12 @@ const Header = () => {
               className="block w-full text-left nav-link"
             >
               Services
+            </button>
+            <button 
+              onClick={() => scrollToSection('privacy-policy')}
+              className="block w-full text-left nav-link"
+            >
+              Privacy Policy
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
