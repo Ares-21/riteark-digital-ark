@@ -115,7 +115,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="mt-1 bg-background/50 border-border/50 focus:border-primary/50 focus:bg-background/80 transition-all"
+                    className="mt-1 bg-transparent border-0 border-b border-border focus:border-primary focus:bg-transparent transition-all outline-none"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -131,7 +131,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="mt-1 bg-background/50 border-border/50 focus:border-primary/50 focus:bg-background/80 transition-all"
+                    className="mt-1 bg-transparent border-0 border-b border-border focus:border-primary focus:bg-transparent transition-all outline-none"
                     placeholder="your.email@company.com"
                   />
                 </div>
@@ -147,7 +147,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={4}
-                    className="mt-1 bg-background/50 border-border/50 focus:border-primary/50 focus:bg-background/80 transition-all resize-none"
+                    className="mt-1 bg-transparent border-0 border-b border-border focus:border-primary focus:bg-transparent transition-all resize-none outline-none"
                     placeholder="Describe your current challenges, goals, and what you're looking to achieve..."
                   />
                 </div>
