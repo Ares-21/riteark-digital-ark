@@ -25,16 +25,16 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-gradient-subtle">
+    <section id="about" className="py-16 bg-gradient-subtle">
       <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Building <span className="gradient-text">Digital Fortresses</span>
               <br />for Modern Business
             </h2>
-            <p className="max-w-3xl mx-auto text-xl text-muted-foreground leading-relaxed">
+            <p className="max-w-2xl mx-auto text-lg text-muted-foreground leading-relaxed">
               At Rite Ark Technologies LLC, we understand that in today's digital landscape, 
               your technology infrastructure is the foundation of your success. We're here to 
               ensure that foundation is unshakeable.
@@ -42,14 +42,14 @@ const About = () => {
           </div>
 
           {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             {/* Left Content */}
-            <div className="space-y-8 animate-slide-up">
+            <div className="space-y-6 animate-slide-up">
               <div>
-                <h3 className="text-2xl font-bold mb-4 text-foreground">
+                <h3 className="text-xl font-bold mb-3 text-foreground">
                   Your Trusted Technology Guardian
                 </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   In an era where digital threats evolve daily and business demands accelerate constantly, 
                   you need more than just technology solutions—you need a digital ark that protects, 
                   empowers, and propels your organization forward.
@@ -57,8 +57,8 @@ const About = () => {
               </div>
 
               <div>
-                <h4 className="text-xl font-semibold mb-3 text-foreground">Our Mission</h4>
-                <p className="text-muted-foreground leading-relaxed">
+                <h4 className="text-lg font-semibold mb-2 text-foreground">Our Mission</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   To be the fortress that shields your digital assets while being the catalyst 
                   that transforms your business operations. We combine military-grade security 
                   with innovative automation to create solutions that don't just meet today's 
@@ -66,9 +66,9 @@ const About = () => {
                 </p>
               </div>
 
-              <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 glow-gold">
-                <h4 className="text-lg font-semibold mb-2 gradient-text">Why Choose Rite Ark?</h4>
-                <p className="text-muted-foreground">
+              <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-4 glow-gold">
+                <h4 className="text-base font-semibold mb-2 gradient-text">Why Choose Rite Ark?</h4>
+                <p className="text-sm text-muted-foreground">
                   Because your business deserves technology solutions that work as hard as you do, 
                   with the peace of mind that comes from knowing your digital assets are protected 
                   by the very best.
@@ -77,22 +77,22 @@ const About = () => {
             </div>
 
             {/* Right Content - Values Grid */}
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-4">
               {values.map((value, index) => (
                 <div 
                   key={value.title}
                   className={`service-card animate-fade-in`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="mb-4">
-                    <div className="w-12 h-12 bg-gradient-hero rounded-xl flex items-center justify-center shadow-gold">
-                      <value.icon className="w-6 h-6 text-primary-foreground" />
+                  <div className="mb-3">
+                    <div className="w-10 h-10 bg-gradient-hero rounded-xl flex items-center justify-center shadow-gold">
+                      <value.icon className="w-5 h-5 text-primary-foreground" />
                     </div>
                   </div>
-                  <h4 className="text-lg font-semibold mb-3 text-foreground">
+                  <h4 className="text-base font-semibold mb-2 text-foreground">
                     {value.title}
                   </h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-xs leading-relaxed">
                     {value.description}
                   </p>
                 </div>

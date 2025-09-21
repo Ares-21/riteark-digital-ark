@@ -77,34 +77,34 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-gradient-subtle">
+    <section id="contact" className="py-16 bg-gradient-subtle">
       <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Let's Build Your <span className="gradient-text">Digital Fortress</span>
             </h2>
-            <p className="max-w-3xl mx-auto text-xl text-muted-foreground leading-relaxed">
+            <p className="max-w-2xl mx-auto text-lg text-muted-foreground leading-relaxed">
               Ready to transform your business with cutting-edge technology solutions? 
               Our experts are standing by to create a custom strategy for your success.
             </p>
           </div>
 
           {/* Two main boxes with equal height */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-16">
+          <div className="grid lg:grid-cols-2 gap-6 mb-12">
             {/* Contact Form Box */}
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 glow-elegant h-full animate-slide-up">
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold mb-3 text-foreground">
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6 glow-elegant h-full animate-slide-up">
+              <div className="mb-4">
+                <h3 className="text-xl font-bold mb-2 text-foreground">
                   Get Your Free Consultation
                 </h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-xs">
                   Tell us about your challenges, and we'll craft a solution that fits your needs perfectly.
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-3">
                 <div>
                   <Label htmlFor="name" className="text-foreground font-medium text-sm">
                     Your Name *
@@ -166,26 +166,26 @@ const Contact = () => {
             </div>
 
             {/* Contact Information Box */}
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 glow-elegant h-full animate-fade-in">
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold mb-3 text-foreground">
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6 glow-elegant h-full animate-fade-in">
+              <div className="mb-4">
+                <h3 className="text-xl font-bold mb-2 text-foreground">
                   Direct Contact Information
                 </h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-xs">
                   Get in touch with our team for immediate assistance and expert guidance.
                 </p>
               </div>
               
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {contactInfo.map((info) => (
-                  <div key={info.label} className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-hero rounded-xl flex items-center justify-center shadow-gold flex-shrink-0">
-                      <info.icon className="w-6 h-6 text-primary-foreground" />
+                  <div key={info.label} className="flex items-start gap-3">
+                    <div className="w-10 h-10 bg-gradient-hero rounded-xl flex items-center justify-center shadow-gold flex-shrink-0">
+                      <info.icon className="w-5 h-5 text-primary-foreground" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-semibold text-foreground mb-1">{info.label}</h4>
-                      <p className="text-lg font-medium gradient-text mb-1">{info.value}</p>
-                      <p className="text-sm text-muted-foreground">{info.description}</p>
+                      <h4 className="font-semibold text-foreground mb-1 text-sm">{info.label}</h4>
+                      <p className="text-base font-medium gradient-text mb-1">{info.value}</p>
+                      <p className="text-xs text-muted-foreground">{info.description}</p>
                     </div>
                   </div>
                 ))}
@@ -194,35 +194,35 @@ const Contact = () => {
           </div>
 
           {/* Our Commitment Section */}
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <div>
 
               {/* Guarantees */}
               <div>
-                <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
+                <h3 className="text-xl font-bold text-foreground mb-4 text-center">
                   Our Commitment to You
                 </h3>
                 
                 {/* Three guarantees in horizontal row */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                   {guarantees.map((guarantee) => (
                     <div key={guarantee.title} className="text-center">
-                      <div className="flex justify-center mb-3">
-                        <guarantee.icon className="w-6 h-6 text-primary" />
+                      <div className="flex justify-center mb-2">
+                        <guarantee.icon className="w-5 h-5 text-primary" />
                       </div>
-                      <h4 className="font-semibold text-foreground mb-2">{guarantee.title}</h4>
-                      <p className="text-sm text-muted-foreground">{guarantee.description}</p>
+                      <h4 className="font-semibold text-foreground mb-1 text-sm">{guarantee.title}</h4>
+                      <p className="text-xs text-muted-foreground">{guarantee.description}</p>
                     </div>
                   ))}
                 </div>
 
                 {/* Emergency Contact - Centered full width */}
-                <div className="bg-primary/10 border border-primary/20 rounded-xl p-6 text-center">
-                  <h4 className="font-semibold text-foreground mb-2 flex items-center justify-center gap-2">
+                <div className="bg-primary/10 border border-primary/20 rounded-xl p-4 text-center">
+                  <h4 className="font-semibold text-foreground mb-1 flex items-center justify-center gap-2 text-sm">
                     <Shield className="w-4 h-4 text-primary" />
                     Emergency Support
                   </h4>
-                  <p className="text-sm text-muted-foreground mb-4">
+                  <p className="text-xs text-muted-foreground mb-3">
                     Critical security issues? Our emergency response team is available 24/7.
                   </p>
                   <Button variant="outline" size="sm" className="mx-auto">
