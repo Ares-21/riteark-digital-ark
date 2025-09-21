@@ -37,6 +37,11 @@ const Hero = () => {
               <br />
               <span className="gradient-text">TECHNOLOGIES LLC</span>
             </h1>
+            
+            {/* Tagline */}
+            <p className="text-2xl md:text-3xl text-yellow-300 font-medium mt-4">
+              Your Digital ARK of Trust
+            </p>
 
             {/* Description */}
             <p className="max-w-3xl mx-auto text-xl md:text-2xl text-muted-foreground leading-relaxed">
