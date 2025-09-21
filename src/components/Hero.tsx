@@ -38,11 +38,16 @@ const Hero = () => {
 
             {/* Main Heading */}
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight">
-              <span className="gradient-text">Your Digital</span>
+              <span className="gradient-text">RITE ARK</span>
               <br />
-              <span className="text-foreground">ARK of </span>
-              <span className="gradient-text">Trust</span>
+              <span className="text-foreground">TECHNOLOGIES </span>
+              <span className="gradient-text">LLC</span>
             </h1>
+            
+            {/* Tagline */}
+            <p className="text-2xl md:text-3xl text-muted-foreground font-medium mt-4">
+              Your Digital ARK of Trust
+            </p>
 
             {/* Description */}
             <p className="max-w-3xl mx-auto text-xl md:text-2xl text-muted-foreground leading-relaxed">
