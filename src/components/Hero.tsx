@@ -39,8 +39,8 @@ const Hero = () => {
             </h1>
             
             {/* Tagline */}
-            <div className="inline-flex items-center justify-center gap-3 text-2xl md:text-3xl text-yellow-300 font-medium mt-4 border border-yellow-400/50 rounded-full px-6 py-3">
-              <ShieldCheck className="w-7 h-7 md:w-8 md:h-8 text-yellow-400" />
+            <div className="inline-flex items-center justify-center gap-3 text-2xl md:text-3xl font-medium mt-4 border border-yellow-400/50 rounded-full px-6 py-3" style={{color: '#FFECB3'}}>
+              <ShieldCheck className="w-7 h-7 md:w-8 md:h-8" style={{color: '#FFECB3'}} />
               <span>Your Digital ARK of Trust</span>
             </div>
 
