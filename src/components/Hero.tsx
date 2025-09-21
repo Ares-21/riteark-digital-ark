@@ -44,6 +44,12 @@ const Hero = () => {
               <span>Your Digital ARK of Trust</span>
             </div>
 
+            {/* Main Mission Statement */}
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="gradient-text">Building Digital Fortresses</span>
+              <br />for Modern Business
+            </h2>
+
             {/* Description */}
             <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground leading-relaxed">
               Empowering businesses with cutting-edge cybersecurity, AI automation, 
