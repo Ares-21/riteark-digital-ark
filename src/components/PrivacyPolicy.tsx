@@ -197,7 +197,7 @@ const PrivacyPolicy = () => {
                   </p>
                   <div className="text-muted-foreground space-y-1">
                     <p><strong>Email:</strong> privacy@riteark.com</p>
-                    <p><strong>Phone:</strong> +971 XXX XXXX</p>
+                    <p><strong>Phone:</strong> +971 50 3711579</p>
                     <p><strong>Address:</strong> Rite Ark Technologies LLC, UAE</p>
                   </div>
                 </div>
