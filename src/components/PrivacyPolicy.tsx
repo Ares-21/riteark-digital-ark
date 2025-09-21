@@ -307,12 +307,11 @@ const PrivacyPolicy = () => {
                 <div>
                   <h2 className="text-xl font-semibold text-foreground mb-3">18. Contact Us</h2>
                   <p className="text-muted-foreground mb-3">
-                    If you have questions about this Privacy Policy or wish to exercise your rights, please contact us:
+                    If you have questions about this Privacy Policy or wish to exercise your rights, please contact by mail to our Data Protection Officer / Contact Person responsible for overseeing compliance with this policy.
                   </p>
                   <div className="text-muted-foreground space-y-1">
                     <p><strong>Email:</strong> privacy@riteark.com</p>
-                    <p><strong>Phone:</strong> +971 50 3711579</p>
-                    <p><strong>Address:</strong> Rite Ark Technologies LLC, UAE</p>
+                    <p><strong>Address:</strong> Rite Ark Technologies LLC, UAE.</p>
                   </div>
                 </div>
               </div>
