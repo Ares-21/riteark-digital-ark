@@ -197,36 +197,37 @@ const Contact = () => {
 
               {/* Guarantees */}
               <div>
-                <h3 className="text-2xl font-bold text-foreground mb-6">
+                <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
                   Our Commitment to You
                 </h3>
                 
-                <div className="space-y-4">
+                {/* Three guarantees in horizontal row */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                   {guarantees.map((guarantee) => (
-                    <div key={guarantee.title} className="flex items-start gap-3">
-                      <guarantee.icon className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                      <div>
-                        <h4 className="font-semibold text-foreground">{guarantee.title}</h4>
-                        <p className="text-sm text-muted-foreground">{guarantee.description}</p>
+                    <div key={guarantee.title} className="text-center">
+                      <div className="flex justify-center mb-3">
+                        <guarantee.icon className="w-6 h-6 text-primary" />
                       </div>
+                      <h4 className="font-semibold text-foreground mb-2">{guarantee.title}</h4>
+                      <p className="text-sm text-muted-foreground">{guarantee.description}</p>
                     </div>
                   ))}
                 </div>
-              </div>
 
-              {/* Emergency Contact */}
-              <div className="bg-primary/10 border border-primary/20 rounded-xl p-6">
-                <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                  <Shield className="w-4 h-4 text-primary" />
-                  Emergency Support
-                </h4>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Critical security issues? Our emergency response team is available 24/7.
-                </p>
-                <Button variant="outline" size="sm" className="w-full">
-                  <Phone className="w-4 h-4" />
-                  Call Emergency Line
-                </Button>
+                {/* Emergency Contact - Centered full width */}
+                <div className="bg-primary/10 border border-primary/20 rounded-xl p-6 text-center">
+                  <h4 className="font-semibold text-foreground mb-2 flex items-center justify-center gap-2">
+                    <Shield className="w-4 h-4 text-primary" />
+                    Emergency Support
+                  </h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Critical security issues? Our emergency response team is available 24/7.
+                  </p>
+                  <Button variant="outline" size="sm" className="mx-auto">
+                    <Phone className="w-4 h-4" />
+                    Call Emergency Line
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
