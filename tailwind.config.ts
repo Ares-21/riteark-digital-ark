@@ -75,6 +75,10 @@ export default {
         'glow': 'glow 2s ease-in-out infinite alternate',
         'float': 'float 3s ease-in-out infinite',
       },
+      fontFamily: {
+        'playfair': ['Playfair Display', 'serif'],
+        'inter': ['Inter', 'sans-serif'],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
