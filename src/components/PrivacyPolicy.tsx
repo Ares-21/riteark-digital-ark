@@ -186,12 +186,72 @@ const PrivacyPolicy = () => {
               </div>
             </div>
 
+            {/* Cookies & Tracking */}
+            <div className="service-card p-6">
+              <div className="flex items-start gap-4">
+                <Globe className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <h2 className="text-xl font-semibold text-foreground mb-3">10. Cookies & Tracking</h2>
+                  <p className="text-muted-foreground mb-3">Our website uses cookies and tracking technologies to:</p>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                    <li>Enhance user experience.</li>
+                    <li>Analyze traffic and site performance.</li>
+                    <li>Personalize marketing.</li>
+                  </ul>
+                  <p className="text-muted-foreground mt-3">You can control cookies through browser settings.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Third-Party Links */}
+            <div className="service-card p-6">
+              <div className="flex items-start gap-4">
+                <FileText className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <h2 className="text-xl font-semibold text-foreground mb-3">11. Third-Party Links</h2>
+                  <p className="text-muted-foreground">
+                    Our website may contain links to external websites. We are not responsible for their privacy practices and encourage you to review their policies.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Children's Privacy */}
+            <div className="service-card p-6">
+              <div className="flex items-start gap-4">
+                <Shield className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <h2 className="text-xl font-semibold text-foreground mb-3">12. Children's Privacy</h2>
+                  <p className="text-muted-foreground">
+                    We do not knowingly collect personal information from individuals under the age of 18 without parental consent.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Global Compliance */}
+            <div className="service-card p-6">
+              <div className="flex items-start gap-4">
+                <Globe className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <h2 className="text-xl font-semibold text-foreground mb-3">13. Global Compliance</h2>
+                  <p className="text-muted-foreground mb-3">This policy is aligned with:</p>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                    <li>UAE PDPL (Federal Decree-Law No. 45 of 2021)</li>
+                    <li>GDPR (EU General Data Protection Regulation)</li>
+                    <li>CCPA (California Consumer Privacy Act) – principles where applicable</li>
+                    <li>International data transfer best practices</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
             {/* Contact Information */}
             <div className="service-card p-6 bg-primary/5 border-primary/20">
               <div className="flex items-start gap-4">
                 <FileText className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <h2 className="text-xl font-semibold text-foreground mb-3">10. Contact Us</h2>
+                  <h2 className="text-xl font-semibold text-foreground mb-3">14. Contact Us</h2>
                   <p className="text-muted-foreground mb-3">
                     If you have questions about this Privacy Policy or wish to exercise your rights, please contact us:
                   </p>
@@ -209,7 +269,7 @@ const PrivacyPolicy = () => {
               <div className="flex items-start gap-4">
                 <Clock className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <h2 className="text-xl font-semibold text-foreground mb-3">11. Policy Updates</h2>
+                  <h2 className="text-xl font-semibold text-foreground mb-3">15. Policy Updates</h2>
                   <p className="text-muted-foreground">
                     We may update this Privacy Policy periodically to reflect changes in our practices, technology, or legal requirements. 
                     We will notify you of any material changes via email or through our website. The "Effective Date" at the top of this 
