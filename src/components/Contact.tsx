@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
-import { Phone, Mail, MapPin, Send, Shield, Clock, Users } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, Shield, Clock, Users, Globe } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -41,20 +41,23 @@ const Contact = () => {
     {
       icon: Phone,
       label: "Direct Line",
-      value: "+971 503 711 579",
-      description: "Available 24/7 for urgent matters"
+      value: "+971 503 711 579"
     },
     {
       icon: Mail,
       label: "Email",
-      value: "ritearktechnologies@gmail.com",
-      description: "We respond within 2 hours"
+      value: "ritearktechnologies@gmail.com"
     },
     {
       icon: MapPin,
       label: "Headquarters",
-      value: "UAE",
-      description: "Serving clients globally"
+      value: "UAE"
+    },
+    {
+      icon: Globe,
+      label: "Website",
+      value: "https://www.riteark.com",
+      isLink: true
     }
   ];
 
@@ -184,11 +187,40 @@ const Contact = () => {
                     </div>
                     <div className="flex-1">
                       <h4 className="font-semibold text-foreground mb-1 text-sm">{info.label}</h4>
-                      <p className="text-base font-medium gradient-text mb-1">{info.value}</p>
-                      <p className="text-xs text-muted-foreground">{info.description}</p>
+                      {info.isLink ? (
+                        <a 
+                          href={info.value} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-base font-medium gradient-text mb-1 hover:underline"
+                        >
+                          {info.value}
+                        </a>
+                      ) : (
+                        <p className="text-base font-medium gradient-text mb-1">{info.value}</p>
+                      )}
                     </div>
                   </div>
                 ))}
+                
+                {/* Social Media Links */}
+                <div className="mt-6 pt-4 border-t border-border/20">
+                  <div className="space-y-2">
+                    <p className="text-sm font-semibold text-foreground mb-3">Follow Us</p>
+                    <p className="text-xs text-muted-foreground">
+                      <strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61581266492380" target="_blank" rel="noopener noreferrer" className="gradient-text hover:underline">facebook.com/profile.php?id=61581266492380</a>
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      <strong>Instagram:</strong> <a href="https://www.instagram.com/riteark/" target="_blank" rel="noopener noreferrer" className="gradient-text hover:underline">@riteark</a>
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rite-ark-693a45385" target="_blank" rel="noopener noreferrer" className="gradient-text hover:underline">linkedin.com/in/rite-ark-693a45385</a>
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      <strong>X (Twitter):</strong> <a href="https://x.com/RiteArkTech" target="_blank" rel="noopener noreferrer" className="gradient-text hover:underline">@RiteArkTech</a>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
