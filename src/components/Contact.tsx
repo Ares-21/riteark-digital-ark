@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
-import { Phone, Mail, MapPin, Send, Shield, Clock, Users, Globe } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, Shield, Clock, Users } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -55,13 +55,6 @@ const Contact = () => {
       label: "Headquarters",
       value: "UAE",
       description: "Serving clients globally"
-    },
-    {
-      icon: Globe,
-      label: "Website",
-      value: "https://www.riteark.com",
-      description: "Visit our official website",
-      isLink: true
     }
   ];
 
@@ -191,18 +184,7 @@ const Contact = () => {
                     </div>
                     <div className="flex-1">
                       <h4 className="font-semibold text-foreground mb-1 text-sm">{info.label}</h4>
-                      {info.isLink ? (
-                        <a 
-                          href={info.value} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-base font-medium gradient-text mb-1 hover:underline block"
-                        >
-                          {info.value}
-                        </a>
-                      ) : (
-                        <p className="text-base font-medium gradient-text mb-1">{info.value}</p>
-                      )}
+                      <p className="text-base font-medium gradient-text mb-1">{info.value}</p>
                       <p className="text-xs text-muted-foreground">{info.description}</p>
                     </div>
                   </div>
