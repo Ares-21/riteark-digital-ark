@@ -116,7 +116,7 @@ const Contact = () => {
           {/* Two main boxes with equal height */}
           <div className="grid lg:grid-cols-2 gap-6 mb-12">
             {/* Contact Form Box */}
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6 glow-elegant h-full animate-slide-up">
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6 glow-elegant flex flex-col animate-slide-up">
               <div className="mb-4">
                 <h3 className="text-xl font-bold mb-2 text-foreground">
                   Get Your Free Consultation
@@ -126,7 +126,7 @@ const Contact = () => {
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-3">
+              <form onSubmit={handleSubmit} className="space-y-3 flex-1 flex flex-col">
                 <div>
                   <Label htmlFor="name" className="text-foreground font-medium text-sm">
                     Your Name *
@@ -158,7 +158,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <div>
+                <div className="flex-1 flex flex-col">
                   <Label htmlFor="message" className="text-foreground font-medium text-sm">
                     Project Details *
                   </Label>
@@ -169,26 +169,28 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={4}
-                    className="mt-1 bg-background/50 border-border/50 focus:border-primary/50 focus:bg-background/80 transition-all resize-none"
+                    className="mt-1 bg-background/50 border-border/50 focus:border-primary/50 focus:bg-background/80 transition-all resize-none flex-1"
                     placeholder="Describe your current challenges, goals, and what you're looking to achieve..."
                   />
                 </div>
 
-                <Button 
-                  type="submit" 
-                  variant="hero" 
-                  size="lg" 
-                  disabled={isSubmitting}
-                  className="w-full group mt-6"
-                >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                  <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <div className="mt-auto pt-6">
+                  <Button 
+                    type="submit" 
+                    variant="hero" 
+                    size="lg" 
+                    disabled={isSubmitting}
+                    className="w-full group"
+                  >
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </div>
               </form>
             </div>
 
             {/* Contact Information Box */}
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6 glow-elegant h-full animate-fade-in">
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6 glow-elegant flex flex-col animate-fade-in">
               <div className="mb-4">
                 <h3 className="text-xl font-bold mb-2 text-foreground">
                   Direct Contact Information
@@ -198,20 +200,22 @@ const Contact = () => {
                 </p>
               </div>
               
-              <div className="space-y-6">
-                {contactInfo.map((info) => (
-                  <div key={info.label} className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gradient-hero rounded-xl flex items-center justify-center shadow-gold flex-shrink-0">
-                      <info.icon className="w-6 h-6 text-primary-foreground" />
+              <div className="flex-1 flex flex-col justify-between">
+                <div className="space-y-6">
+                  {contactInfo.map((info) => (
+                    <div key={info.label} className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-gradient-hero rounded-xl flex items-center justify-center shadow-gold flex-shrink-0">
+                        <info.icon className="w-6 h-6 text-primary-foreground" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="font-semibold text-foreground mb-1 text-sm leading-tight">{info.label}</h4>
+                        <p className="text-base font-medium gradient-text leading-tight break-words">{info.value}</p>
+                      </div>
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <h4 className="font-semibold text-foreground mb-1 text-sm leading-tight">{info.label}</h4>
-                      <p className="text-base font-medium gradient-text leading-tight break-words">{info.value}</p>
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
                 
-                {/* Social Media Links */}
+                {/* Social Media Links - Positioned at bottom */}
                 <div className="mt-8 pt-6 border-t border-border/20">
                   <h4 className="text-sm font-semibold text-foreground mb-4">Connect With Us</h4>
                   <div className="grid grid-cols-2 gap-3">
