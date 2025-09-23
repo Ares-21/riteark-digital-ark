@@ -198,15 +198,15 @@ const Contact = () => {
                 </p>
               </div>
               
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {contactInfo.map((info) => (
-                  <div key={info.label} className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-gradient-hero rounded-xl flex items-center justify-center shadow-gold flex-shrink-0">
-                      <info.icon className="w-5 h-5 text-primary-foreground" />
+                  <div key={info.label} className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-gradient-hero rounded-xl flex items-center justify-center shadow-gold flex-shrink-0">
+                      <info.icon className="w-6 h-6 text-primary-foreground" />
                     </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-foreground mb-1 text-sm">{info.label}</h4>
-                      <p className="text-base font-medium gradient-text mb-1">{info.value}</p>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-semibold text-foreground mb-1 text-sm leading-tight">{info.label}</h4>
+                      <p className="text-base font-medium gradient-text leading-tight break-words">{info.value}</p>
                     </div>
                   </div>
                 ))}
