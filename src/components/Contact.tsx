@@ -52,12 +52,6 @@ const Contact = () => {
       icon: MapPin,
       label: "Headquarters",
       value: "UAE - Serving clients globally"
-    },
-    {
-      icon: Globe,
-      label: "Website",
-      value: "https://www.riteark.com",
-      isLink: true
     }
   ];
 
@@ -187,18 +181,7 @@ const Contact = () => {
                     </div>
                     <div className="flex-1">
                       <h4 className="font-semibold text-foreground mb-1 text-sm">{info.label}</h4>
-                      {info.isLink ? (
-                        <a 
-                          href={info.value} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-base font-medium gradient-text mb-1 hover:underline"
-                        >
-                          {info.value}
-                        </a>
-                      ) : (
-                        <p className="text-base font-medium gradient-text mb-1">{info.value}</p>
-                      )}
+                      <p className="text-base font-medium gradient-text mb-1">{info.value}</p>
                     </div>
                   </div>
                 ))}
