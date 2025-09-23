@@ -19,15 +19,33 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/send-contact-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
       toast({
         title: "Message Sent Successfully!",
         description: "We'll get back to you within 24 hours with a tailored solution for your needs.",
       });
       setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      toast({
+        title: "Message Failed to Send",
+        description: "Please try again or contact us directly at ritearktechnologies@gmail.com",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
