@@ -51,7 +51,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Headquarters",
-      value: "UAE - serving clients globally"
+      value: "UAE - Serving clients globally"
     },
     {
       icon: Globe,
