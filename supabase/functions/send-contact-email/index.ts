@@ -46,7 +46,7 @@ serve(async (req) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'noreply@resend.dev', // You'll need to verify your domain with Resend
+        from: 'onboarding@resend.dev', // Using Resend's test domain
         to: ['ritearktechnologies@gmail.com'],
         subject: `New Contact Form Submission from ${name}`,
         html: `
