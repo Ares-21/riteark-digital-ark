@@ -11,6 +11,13 @@ const Header = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setIsMenuOpen(false);
+      
+      // If privacy policy section, dispatch custom event to open accordion
+      if (sectionId === 'privacy-policy') {
+        setTimeout(() => {
+          window.dispatchEvent(new CustomEvent('openPrivacyPolicy'));
+        }, 100);
+      }
     }
   };
 

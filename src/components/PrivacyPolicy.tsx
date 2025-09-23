@@ -1,35 +1,71 @@
-import { Shield, Lock, Users, FileText, Globe, Clock } from 'lucide-react';
+import { Shield, Lock, Users, FileText, Globe, Clock, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const PrivacyPolicy = () => {
+  const [isOpen, setIsOpen] = useState<string>("");
+
+  useEffect(() => {
+    // Check if URL has privacy hash or open parameter
+    const shouldOpen = window.location.hash.includes('privacy') || 
+                      window.location.search.includes('open=privacy');
+    if (shouldOpen) {
+      setIsOpen("privacy-content");
+    }
+
+    // Listen for custom events from header click
+    const handlePrivacyOpen = () => {
+      setIsOpen("privacy-content");
+    };
+
+    window.addEventListener('openPrivacyPolicy', handlePrivacyOpen);
+    return () => window.removeEventListener('openPrivacyPolicy', handlePrivacyOpen);
+  }, []);
+
   return (
     <section id="privacy-policy" className="py-16 pt-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border/50 rounded-full px-8 py-4 mb-6">
-              <FileText className="w-5 h-5 text-primary" />
-              <span className="text-4xl md:text-5xl font-bold gradient-text">
-                Privacy Policy
-              </span>
-            </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Rite Ark Technologies LLC
-            </h1>
-            <p className="text-muted-foreground text-lg">
-              Version 1.1 – Effective September 22, 2025
-            </p>
-          </div>
+          <Accordion type="single" value={isOpen} onValueChange={setIsOpen} collapsible>
+            <AccordionItem value="privacy-content" className="border-none">
+              <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div>div]:mb-12">
+                <div className="text-center w-full">
+                  <div className="inline-flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border/50 rounded-full px-8 py-4 mb-6">
+                    <FileText className="w-5 h-5 text-primary" />
+                    <span className="text-4xl md:text-5xl font-bold gradient-text">
+                      Privacy Policy
+                    </span>
+                  </div>
+                  <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                    Rite Ark Technologies LLC
+                  </h1>
+                  <p className="text-muted-foreground text-lg">
+                    Version 1.1 – Effective September 22, 2025
+                  </p>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pt-0">
+                {/* Close Button */}
+                <div className="flex justify-end mb-6">
+                  <button
+                    onClick={() => setIsOpen("")}
+                    className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors bg-card/50 backdrop-blur-sm border border-border/50 rounded-full px-4 py-2"
+                    aria-label="Close Privacy Policy"
+                  >
+                    <X className="w-4 h-4" />
+                    Close
+                  </button>
+                </div>
 
-          {/* Introduction */}
-          <div className="prose prose-lg max-w-none text-foreground mb-8">
-            <p className="text-lg leading-relaxed">
-              Rite Ark Technologies LLC ("we," "our," "us") values your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, process, use, disclose, and safeguard your information when you use our services or interact with our website. It complies with United Arab Emirates (UAE) data protection regulations and adheres to international standards including the EU General Data Protection Regulation (GDPR) and global best practices.
-            </p>
-          </div>
+                {/* Introduction */}
+                <div className="prose prose-lg max-w-none text-foreground mb-8">
+                  <p className="text-lg leading-relaxed">
+                    Rite Ark Technologies LLC ("we," "our," "us") values your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, process, use, disclose, and safeguard your information when you use our services or interact with our website. It complies with United Arab Emirates (UAE) data protection regulations and adheres to international standards including the EU General Data Protection Regulation (GDPR) and global best practices.
+                  </p>
+                </div>
 
-          {/* Policy Sections */}
-          <div className="space-y-8">
+                {/* Policy Sections */}
+                <div className="space-y-8">
             {/* Scope */}
             <div className="service-card p-6">
               <div className="flex items-start gap-4">
@@ -316,7 +352,10 @@ const PrivacyPolicy = () => {
                 </div>
               </div>
             </div>
-          </div>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </div>
     </section>
