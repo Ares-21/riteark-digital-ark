@@ -29,7 +29,12 @@ const Contact = () => {
       });
 
       if (!response.ok) {
-        throw new Error('Failed to send message');
+        let errorText = 'Failed to send message';
+        try {
+          const data = await response.json();
+          errorText = (data?.error || data?.message || errorText);
+        } catch {}
+        throw new Error(errorText);
       }
 
       toast({
@@ -38,9 +43,11 @@ const Contact = () => {
       });
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
+      console.error('Contact form submission error:', error);
+      const message = error instanceof Error ? error.message : 'Unknown error';
       toast({
         title: "Message Failed to Send",
-        description: "Please try again or contact us directly at ritearktechnologies@gmail.com",
+        description: message || "Please try again or contact us directly at ritearktechnologies@gmail.com",
         variant: "destructive",
       });
     } finally {

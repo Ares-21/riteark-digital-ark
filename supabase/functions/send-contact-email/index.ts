@@ -38,6 +38,20 @@ serve(async (req) => {
       );
     }
 
+    // Ensure Resend API key exists
+    if (!RESEND_API_KEY) {
+      return new Response(
+        JSON.stringify({ error: 'Missing RESEND_API_KEY in Supabase secrets' }),
+        { 
+          status: 500,
+          headers: { 
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+          }
+        }
+      );
+    }
+
     // Send email using Resend
     const emailResponse = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -46,7 +60,7 @@ serve(async (req) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'onboarding@resend.dev', // Using Resend's test domain
+        from: 'onboarding@resend.dev',
         to: ['ritearktechnologies@gmail.com'],
         subject: `New Contact Form Submission from ${name}`,
         html: `
@@ -62,7 +76,17 @@ serve(async (req) => {
     });
 
     if (!emailResponse.ok) {
-      throw new Error('Failed to send email');
+      const errorBody = await emailResponse.text();
+      return new Response(
+        JSON.stringify({ error: 'Resend API error', details: errorBody }),
+        { 
+          status: 502,
+          headers: { 
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+          }
+        }
+      );
     }
 
     return new Response(
