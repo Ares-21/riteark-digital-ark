@@ -45,8 +45,8 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             {/* Left Content */}
             <div className="space-y-6 animate-slide-up">
-              <div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">
+              <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-4 glow-gold">
+                <h3 className="text-xl font-bold mb-3 gradient-text">
                   Your Trusted Technology Guardian
                 </h3>
                 <p className="text-base text-muted-foreground leading-relaxed">
@@ -56,8 +56,8 @@ const About = () => {
                 </p>
               </div>
 
-              <div>
-                <h4 className="text-lg font-semibold mb-2 text-foreground">Our Mission</h4>
+              <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-4 glow-gold">
+                <h4 className="text-lg font-semibold mb-2 gradient-text">Our Mission</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   To be the fortress that shields your digital assets while being the catalyst 
                   that transforms your business operations. We combine military-grade security 
