@@ -74,7 +74,7 @@ const PrivacyPolicy = () => {
                   <h2 className="text-xl font-semibold text-foreground mb-3">1. Scope of Policy</h2>
                   <p className="text-muted-foreground mb-3">This Privacy Policy applies to:</p>
                   <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                    <li>All services provided by Rite Ark Technologies LLC, including Cybersecurity Services, Artificial Intelligence & Software Solutions, and Digital Marketing & Media Software Solutions.</li>
+                    <li>All services provided by Rite Ark Technologies LLC, including Cybersecurity Services, Artificial Intelligence & Software Solutions, and Digital Marketing & Media IT Solutions.</li>
                     <li>Our website, online platforms, and communications.</li>
                     <li>All clients, partners, vendors, and website visitors.</li>
                   </ul>

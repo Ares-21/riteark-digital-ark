@@ -19,7 +19,7 @@ const Services = () => {
     },
     {
       icon: Megaphone,
-      title: "Digital Marketing & Media Software",
+      title: "Digital Marketing & Media IT Solutions",
       description: "Data-driven marketing solutions and custom software that amplify your brand presence and drive measurable business growth.",
       features: ["Marketing Automation", "Analytics Platforms", "Content Management", "Lead Generation"],
       accent: TrendingUp,
